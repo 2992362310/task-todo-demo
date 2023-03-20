@@ -6,7 +6,8 @@ import { RouterLink } from 'vue-router';
   <header class="h-[60px] flex items-center justify-center bg-light-50">
     <router-link to="/home" class="mr-2">Home</router-link>
     <router-link to="/about" class="mr-2">About</router-link>
-    <router-link to="/todo">Todo</router-link>
+    <router-link to="/todo" class="mr-2">Todo</router-link>
+    <router-link to="/talk">Talk</router-link>
   </header>
   <main class="h-[calc(100%-60px)] border">
     <suspense>
@@ -23,9 +24,5 @@ import { RouterLink } from 'vue-router';
 
 .router-link-active {
   color: lightskyblue;
-}
-
-.router-link-exact-active {
-  background: lavender;
 }
 </style>

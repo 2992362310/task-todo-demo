@@ -13,6 +13,10 @@ const routes = [
     path: '/todo',
     component: () => import('@/page/Todo/index.vue'),
   },
+  {
+    path: '/talk',
+    component: () => import('@/page/Talk/index.vue'),
+  },
 ];
 
 const router = createRouter({

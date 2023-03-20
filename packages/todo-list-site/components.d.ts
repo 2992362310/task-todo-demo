@@ -14,6 +14,7 @@ declare module '@vue/runtime-core' {
     RouterView: typeof import('vue-router')['RouterView']
     TButton: typeof import('tdesign-vue-next')['Button']
     TDateRangePicker: typeof import('tdesign-vue-next')['DateRangePicker']
+    TInput: typeof import('tdesign-vue-next')['Input']
     TSelect: typeof import('tdesign-vue-next')['Select']
     TTextarea: typeof import('tdesign-vue-next')['Textarea']
   }
