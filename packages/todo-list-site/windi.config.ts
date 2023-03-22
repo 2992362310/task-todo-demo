@@ -3,7 +3,7 @@
 import { defineConfig } from 'windicss/helpers';
 
 export default defineConfig({
-  preflight: false,
+  // preflight: false,
   extract: {
     // A common use case is scanning files from the root directory
     include: ['**/*.{vue,html,jsx,tsx}'],
