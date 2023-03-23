@@ -16,6 +16,7 @@
 body {
   width: 100vw;
   height: 100vh;
+  background: rgba(173, 216, 230, 0.05);
 }
 
 #app {

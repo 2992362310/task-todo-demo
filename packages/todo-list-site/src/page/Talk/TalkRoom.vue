@@ -13,7 +13,7 @@
       </li>
     </ul>
     <div class="flex">
-      <t-input v-model="curWord" @enter="handleClick" />
+      <t-input v-model="curWord" class="mr-1" @enter="handleClick" />
       <t-button variant="outline" @click="handleClick">发送</t-button>
     </div>
   </section>
