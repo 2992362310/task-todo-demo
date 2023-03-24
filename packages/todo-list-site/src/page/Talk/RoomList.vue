@@ -15,9 +15,8 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue';
+import { useTalkStore } from '@/store/talk'; // 能确定是 tsconfig.json 配置的问题，不知道为什么没起作用
 import { TalkListItem } from './type';
-
-import { useTalkStore } from '@/store/talk';
 
 const talkStore = useTalkStore();
 
