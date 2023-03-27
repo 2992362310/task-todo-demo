@@ -1,5 +1,5 @@
 <template>
-  <ul class="border m-2 mt-0 p-1 pt-0 h-[48%] overflow-auto">
+  <ul class="border p-1 pt-0 m-2 mt-3 h-[50%] overflow-auto">
     <li
       v-for="(item, index) in talkList"
       :key="index"
@@ -13,13 +13,14 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue';
+import { v4 as uuidV4 } from 'uuid';
 import { useTalkStore } from '@/store/talk';
 import { TalkListItem } from './type';
 
 const talkStore = useTalkStore();
 
 const initTalkList: TalkListItem[] = [];
-for (let i = 0; i < 3; i++) {
+for (let i = 0; i < 10; i++) {
   initTalkList.push(createTalkItem());
 }
 const talkList = ref<TalkListItem[]>(initTalkList);
@@ -33,8 +34,8 @@ const handleClick1 = (item: TalkListItem, index: number) => {
 
 function createTalkItem() {
   const newItem = {
-    uuid: '1',
-    talkName: `room+${Math.floor(Math.random() * 100)}`,
+    uuid: uuidV4(),
+    talkName: `user+${Math.floor(Math.random() * 100)}`,
     createTM: 'dwa',
     createById: 'dss',
     createByName: '测试一',

@@ -45,3 +45,7 @@ body {
 [type='text']:focus {
   box-shadow: none;
 }
+
+::-webkit-scrollbar {
+  width: 2px;
+}

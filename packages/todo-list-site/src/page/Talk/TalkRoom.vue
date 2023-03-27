@@ -1,5 +1,5 @@
 <template>
-  <section class="h-full w-[50%] border p-2 flex flex-col justify-between">
+  <section class="h-full border p-2 flex flex-col justify-between">
     <ul>
       <li v-for="(item, index) in messages" :key="index" class="mb-2">
         <div v-if="curUserId === item.senderId" class="flex items-center">

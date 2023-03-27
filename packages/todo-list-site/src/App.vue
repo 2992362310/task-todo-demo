@@ -5,9 +5,12 @@ import { RouterLink } from 'vue-router';
 <template>
   <header class="h-[60px] flex items-center justify-center bg-light-50">
     <router-link to="/home" class="mr-2">Home</router-link>
-    <router-link to="/about" class="mr-2">About</router-link>
+
     <router-link to="/todo" class="mr-2">Todo</router-link>
-    <router-link to="/talk">Talk</router-link>
+    <router-link to="/talk" class="mr-2">Talk</router-link>
+    <router-link to="/book" class="mr-2">Book</router-link>
+
+    <router-link to="/about">About</router-link>
   </header>
   <main class="h-[calc(100%-60px)] border">
     <suspense>

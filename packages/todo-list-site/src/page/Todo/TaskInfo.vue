@@ -2,7 +2,11 @@
   <section>
     <div class="flex">
       <label class="w-[46px]">任务</label>
-      <t-textarea v-model="taskInfo.content" placeholder="请输入任务内容" />
+      <t-input v-model="taskInfo.content" placeholder="请输入任务内容" />
+    </div>
+    <div class="mt-2 flex">
+      <label class="w-[46px]">详情</label>
+      <t-textarea v-model="taskInfo.discrip" placeholder="请输入执行详情" />
     </div>
     <div class="mt-2 flex">
       <div class="flex items-center">
@@ -36,7 +40,7 @@
 
 <script lang="ts" setup>
 import { ref, watch } from 'vue';
-import { Textarea as TTextarea, Select as TSelect } from 'tdesign-vue-next';
+import { Input as TInput, Textarea as TTextarea, Select as TSelect } from 'tdesign-vue-next';
 import { isEqual } from 'lodash';
 
 import { ITodoListItem } from './type';

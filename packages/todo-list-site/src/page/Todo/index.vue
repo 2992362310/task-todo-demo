@@ -7,7 +7,8 @@
             <div
               :class="[
                 'mt-1 p-2 border rounded cursor-pointer flex items-center justify-between',
-                { 'bg-gray-50': curIndex === index },
+                { 'bg-gray-100': curIndex === index },
+                element.status === 2 ? 'text-[#c4c4c4]' : '',
               ]"
             >
               <div class="w-[calc(100%-60px)] flex items-center" @click="handleClick4(index)">
@@ -71,13 +72,13 @@ const closeInfo = (evt: MouseEvent) => {
   // 点击下面任务信息区域
   const bool2 = footerRef.value?.contains(element);
 
-  console.log('点击任务列表区域', bool1);
-  console.log('点击下面任务信息区域', bool2);
-  console.log('curIndex.value', curIndex.value);
+  // console.log('点击任务列表区域', bool1);
+  // console.log('点击下面任务信息区域', bool2);
+  // console.log('curIndex.value', curIndex.value);
 
   // 非任务区域,且任务信息不为空
   if (!(bool1 || bool2) && curIndex.value !== -1) {
-    console.log('关闭任务信息');
+    // console.log('关闭任务信息');
 
     curIndex.value = -1;
   }
@@ -121,6 +122,8 @@ const handleClick4 = (index: number) => {
 // 离线保存
 const handleClick5 = () => {
   localforage.setItem<string>('todoListOutline', JSON.stringify(todoList));
+
+  MessagePlugin.success('离线保存成功');
 };
 
 // 在线保存
