@@ -16,12 +16,12 @@ const routes = [
   },
   {
     path: '/book',
-    component: () => import('@/page/Talk/index.vue'),
+    component: () => import('@/page/Book/index.vue'),
   },
 
   {
     path: '/about',
-    component: () => import('@/page/Book/index.vue'),
+    component: () => import('@/page/About.vue'),
   },
 ];
 
